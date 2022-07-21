@@ -1,0 +1,34 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Создание нового заказа";
+}
+
+<div class="col-6">
+    <form asp-action="Index" method="post">
+     <div asp-validation-summary="All" class="text-danger"></div>
+    <h3>Заполните форму заказа</h3>
+
+    <div class="form-group">
+        <label asp-for="SenderCity" class="form-label"></label><input asp-for="SenderCity" class="form-control" />
+    </div>
+    <div class="form-group">
+       <label asp-for="SenderAddress"></label><input asp-for="SenderAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+       <label asp-for="RecipientCity"></label><input asp-for="RecipientCity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="RecipientAddress"></label><input asp-for="RecipientAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Weight"></label><input asp-for="Weight" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CollectionDate"></label><input asp-for="CollectionDate" class="form-control" />
+    </div>
+  
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Создать"  />
+    </div>
+</form>
+</div>

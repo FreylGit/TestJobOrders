@@ -1,0 +1,33 @@
+﻿@using TestJobOrders.Models.ViewModel
+@model ListOrderViewModel
+@{
+    ViewData["Title"] = "Просмотр заказов";
+}
+@if(Model.Orders.Count()>0){
+     <table class="table table-bordered table-striped">
+        <tr>
+            <th>Номер заказа</th>
+            <th>Город отправителя</th>
+            <th>Адрес отправителя</th>
+            <th>Город получателя</th>
+            <th>Адрес получателя</th>
+            <th>Вес груза</th>
+            <th>Дата забора груза</th>
+            <th></th>
+        </tr>
+        @foreach(Order o in Model.Orders)
+        {
+            <tr>
+                <td>@o.Number</td>
+                <td>@o.SenderCity</td>
+                <td>@o.SenderAddress</td>
+                <td>@o.RecipientCity</td>
+                <td>@o.RecipientAddress</td>
+                <td>@o.Weight</td>
+                <td>@o.CollectionDate</td>
+             
+            </tr>
+           
+        }
+    </table>
+}
