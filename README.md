@@ -15,7 +15,7 @@
 3. Microsoft SQL Server Management Studio 
 4. EntityFrameworkCore
 
-## Разделительная черта  
+
 ## Настройка проекта  
 Для настройки базы данных необходимо  
 1. В файле appsettings.json в строке ApplicationDbContextConnection изменить имя сервера на свое
