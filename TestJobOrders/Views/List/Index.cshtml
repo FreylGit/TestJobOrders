@@ -2,7 +2,17 @@
 @model ListOrderViewModel
 @{
     ViewData["Title"] = "Просмотр заказов";
+    int pageNumb = 1; 
 }
+
+<form asp-action="Index" method="post">
+    <div class="form-group">
+        <label class="form-label"></label>Номер страницы<input name="page"  class="form-control" />
+        <button class="btn btn-secondary " type="submit">Показать</button>
+    </div>
+ 
+    </form>
+
 @if(Model.Orders.Count()>0){
      <table class="table table-bordered table-striped">
         <tr>

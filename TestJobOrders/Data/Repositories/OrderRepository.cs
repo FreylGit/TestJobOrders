@@ -22,11 +22,13 @@ namespace TestJobOrders.Data.Repositories
         public void RemoveOrder(Order order)
         {
             _repository.Orders.Remove(order);
+            _repository.SaveChanges();
         }
 
         public void UpdateOrder(Order order)
         {
             _repository.Orders.Update(order);
+            _repository.SaveChanges();
         }
     }
 }
